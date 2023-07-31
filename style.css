@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body{
+    background: #5C1E6C;
+    padding: 0 20px;
+  }
+  
+  ::selection{
+    color: #fff;
+    background: #664AFF;
+  }
+  
+  .container{
+    max-width: 450px;
+    margin: 50px auto;
+    margin-bottom: 50px;
+  }
+  
+  .container .searchInput{
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+  }
+  
+  .searchInput input{
+    height: 55px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+  }
+  
+  .searchInput.active input{
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .searchInput .resultBox{
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    overflow-y: auto;
+  }
+  
+  .searchInput.active .resultBox{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .resultBox li{
+    list-style: none;
+    padding: 8px 12px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+  }
+  
+  .searchInput.active .resultBox li{
+    display: block;
+  }
+  .resultBox li:hover{
+    background: #efefef;
+  }
+  
+  .searchInput .icon{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 20px;
+    color: #644bff;
+    cursor: pointer;
+  }
+
+  .predictedPlayerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .predictedPlayerContainer div{
+    width: 125px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 33px;
+    margin: 10px;
+    color: white;
+    background-color: #94A3B8;
+  }
+
+
+
+
+  .labelsContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .labelsContainer h3 {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 5px;
+    margin-right: 35px;
+    margin-left: 35px;
+    width: 75px;
+    border-radius: 20px;
+  }
+
+  .nameText{
+    color: white;
+    background-color: #5C1E6C;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  .image{
+    max-width: 75px;
+    max-height: 75px;
+  }
+
+  .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.flex h1{
+  color: white;
+  margin-top: 50px;
+}
+
+.featuresStyle{
+  font-size: 30px;
+}
+
+
+.buttonDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.playAgainButton {
+  background-color: #fff000;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 7px;
+  text-align: center;
+  transition: 200ms;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 10px;
+}
+
+.playAgainButton:not(:disabled):hover,
+.playAgainButton:not(:disabled):focus {
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.playAgainButton:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
+
+
+
+
+@media screen and (max-width: 785px) {
+  
+  .predictedPlayerContainer div{
+    width: 75px;
+    height: 75px;
+  }
+
+  .labelsContainer h3 {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  body{
+    font-size: 10px;
+  }
+  .image{
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
+
+
+@media screen and (max-width: 545px) {
+  .labelsContainer h3 {
+    margin-right: 14px;
+    margin-left: 26px;
+  }
+}
